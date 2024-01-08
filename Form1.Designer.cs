@@ -1,4 +1,6 @@
-﻿namespace EvaluationSystem
+﻿using System.Drawing;
+
+namespace EvaluationSystem
 {
     partial class Form1
     {
@@ -40,12 +42,15 @@
             this.lblmenu = new System.Windows.Forms.Label();
             this.btn_students = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.LogoGifBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoGifBox)).BeginInit();
             this.main_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // main_panel
             // 
             this.main_panel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            //this.main_panel.BackgroundImage = Image.FromFile("../../Resources/UniversityLogo.png");
             this.main_panel.Controls.Add(this.lblmenu);
             this.main_panel.Controls.Add(this.btn_login);
             this.main_panel.Controls.Add(this.btn_find);
@@ -57,6 +62,16 @@
             this.main_panel.Controls.Add(this.btn_grades);
             this.main_panel.Controls.Add(this.btn_students);
             this.main_panel.Dock = System.Windows.Forms.DockStyle.Left;
+            //this.LogoGifBox.Image = Image.FromFile("../../Resources/UniversityLogo.gif");
+
+            //this.LogoGifBox.Location = new System.Drawing.Point(0, 0);
+            //this.LogoGifBox.Name = "UniversityLogo";
+            //this.LogoGifBox.Size = new System.Drawing.Size(162, 498);
+            //this.LogoGifBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.LogoGifBox.TabStop = false;
+            //this.LogoGifBox.TabIndex = 1;
+
+
             this.main_panel.Location = new System.Drawing.Point(0, 0);
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(162, 498);
@@ -265,6 +280,9 @@
             // 
             // Form1
             // 
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#00030E");
+            this.BackgroundImage = Image.FromFile("../../Resources/UniversityLogo.png");
+            this.BackgroundImageLayout =System.Windows.Forms.ImageLayout.Zoom;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 498);
@@ -293,6 +311,7 @@
         private System.Windows.Forms.Label lblmenu;
         private System.Windows.Forms.Button btn_students;
         private System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.PictureBox LogoGifBox;
     }
 }
 

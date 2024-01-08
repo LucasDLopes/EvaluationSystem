@@ -3,7 +3,7 @@ XAAMP
 SAP crystal reports
 to be installed on machine.
 
-please find included in this repo a SQL file.
+please find included in this repo a SQL file on RESOURCES folder.
 
 Initialize XAAMP's apache and MySQL services
 navigate to: http://localhost/phpmyadmin/index.php

@@ -211,8 +211,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />
+    <Content Include="Resources\database.sql" />
     <Content Include="Resources\lockAndFingerPrint.jpg" />
     <Content Include="Resources\lockAndFingerPrint.png" />
+    <Content Include="Resources\UniversityLogo.png" />
+    <None Include="Resources\LogoGifBox.Image.gif" />
+    <Content Include="Resources\UniversityLogo.gif" />
+    <None Include="Resources\UniversityLogoImageBox.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
