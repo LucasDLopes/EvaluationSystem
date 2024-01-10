@@ -19,6 +19,10 @@ namespace EvaluationSystem
             this.frm = frm;
         }
 
+        public frmLogin()
+        {
+        }
+
         SQLConfig SC = new SQLConfig();
         usableFunction UF = new usableFunction();
         string sql;

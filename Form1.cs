@@ -20,18 +20,42 @@ namespace EvaluationSystem
         {
             btn_login .Text = "Logout";
             btn_students .Enabled = true;
+            btn_students.Text= "Manage Students";
+            btn_students.Visible = true;
             btn_course .Enabled = true;
+            btn_course.Text= "Manage Courses";
+            btn_course.Visible = true;
             btn_grades .Enabled = true;
+            btn_grades.Text= "Manage Grades";
+            btn_grades.Visible = true;
             btn_curriculumn .Enabled = true;
+            btn_curriculumn.Text= "Manage Curriculumn";
+            btn_curriculumn.Visible = true;
             btn_users .Enabled = true;
+            btn_users.Text = "Manage Users";
+            btn_users.Visible = true;
             btn_reports .Enabled = true;
+            btn_reports.Text = "Generate Reports (ISSUE PRESENT!)";
+            btn_reports.Visible = true;
             btn_find .Enabled = true;
+            btn_find.Text = "Find Students";
+            btn_find.Visible = true;
             btn_prerequisite.Enabled = true;
+            btn_prerequisite.Text = "Manage Pre-Requisites";
+            btn_prerequisite.Visible = true;
         }
 
         public void disabled_menu()
         {
             btn_login.Text = "Login";
+            btn_students.Text = "";
+            btn_course.Text = "";
+            btn_grades.Text = "";
+            btn_curriculumn.Text = "";
+            btn_users.Text = "";
+            btn_reports.Text = "";
+            btn_find.Text = "";
+            btn_prerequisite.Text = "";
             btn_students.Enabled = false;
             btn_course.Enabled = false;
             btn_grades.Enabled = false;
@@ -40,6 +64,14 @@ namespace EvaluationSystem
             btn_reports.Enabled = false;
             btn_find.Enabled = false;
             btn_prerequisite.Enabled = false ;
+            btn_students.Visible = false;
+            btn_course.Visible = false;
+            btn_grades.Visible = false;
+            btn_curriculumn.Visible = false;
+            btn_users.Visible = false;
+            btn_reports.Visible = false;
+            btn_find.Visible = false;
+            btn_prerequisite.Visible = false;
         }
 
 
@@ -133,12 +165,17 @@ namespace EvaluationSystem
             if (btn_login.Text == "Login")
             {
                 closefrm();
-                showfrm(new frmLogin(this),btn_login);
             }
             else
             {
                 disabled_menu();
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                {
+                    if (Application.OpenForms[i].Name != "Form1")
+                        Application.OpenForms[i].Close();
+                }
             }
+            showfrm(new frmLogin(this), btn_login);
         }
 
         private void btn_students_MouseHover(object sender, EventArgs e)

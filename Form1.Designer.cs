@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace EvaluationSystem
 {
@@ -295,7 +297,7 @@ namespace EvaluationSystem
             this.Load += new System.EventHandler(this.Form1_Load);
             this.main_panel.ResumeLayout(false);
             this.ResumeLayout(false);
-
+            btn_login_Click(null, EventArgs.Empty);
         }
 
         #endregion
